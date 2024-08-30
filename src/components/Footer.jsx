@@ -5,9 +5,9 @@ import line from "../assets/line.png"
 const Footer = () => {
   return (
     <div className='bg-[#F7F0F770] w-full  '>
-        <div className=' container mx-auto px-0 sm:px-4 '>
+        <div className=' container mx-auto px-0 sm:px-4 pb-16 '>
         <div className=' flex flex-col-reverse sm:flex-row justify-center items-center  '>
-      <div className='flex flex-col justify-start items-center sm:bg-white py-8 px-2 sm:px-10 sm:rounded-tl-lg sm:rounded-bl-lg  gap-16 sm:w-[40%]'>
+      <div className='flex flex-col justify-between items-center sm:bg-white py-[18px] px-2 sm:px-10 sm:rounded-tl-lg sm:rounded-bl-lg  gap-12 h-auto  sm:w-[40%]'>
         <img className='h-[131px] w-[158px]' src={Images.logo} alt="" />
         <div className='flex justify-center items-center gap-6'>
             <img src={Images.fb} alt="" />

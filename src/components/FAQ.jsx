@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -19,29 +17,27 @@ const FAQ = () => {
   return (
     <div className='bg-[#F7F0F770] bg-[44%] pb-16'>
       <div className='container mx-auto font-body py-[73px] flex flex-col justify-center items-center gap-8'>
-      <h3 className='text-4xl font-semibold text-[#2E3072]'>FAQ’s</h3>
-      <div className='flex flex-1 justify-center flex-col px-4 items-center'>
-        {faqItems.map((item, index) => (
-          <div key={index} className='py-4 border-b border-b-[#2E3072] max-w-[576px] w-full'>
-            <div
-              className='flex justify-start items-center gap-4 cursor-pointer group'
-              onClick={() => handleToggle(index)}
-            >
-              <FontAwesomeIcon
-                icon={faAngleDown}
-                className={`transition-transform duration-300 text-[#2E3072] ${openIndex === index ? 'rotate-180' : ''}`}
-              />
-              <p className='text-[#2E3072] text-xl font-semibold group-hover:underline'>{item.question}</p>
-            </div>
-            {openIndex === index && (
-              <div className='mt-2 pl-8 text-lg font-normal text-[#2E3072]'>
-                {item.answer}
+        <h3 className='text-4xl font-semibold text-[#2E3072]'>FAQ’s</h3>
+        <div className='flex w-full flex-col px-4 sm:px-32'>
+          {faqItems.map((item, index) => (
+            <div key={index} className='py-4 border-b border-b-[#2E3072]'>
+              <div
+                className='flex justify-start items-center gap-4 cursor-pointer '
+                onClick={() => handleToggle(index)}
+              >
+                <p className='text-[#2E3072] text-xl font-semibold '>
+                  {item.question}
+                </p>
               </div>
-            )}
-          </div>
-        ))}
+              {openIndex === index && (
+                <div className='mt-2  text-lg font-normal text-[#2E3072]'> 
+                  {item.answer}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 };

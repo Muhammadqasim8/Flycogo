@@ -139,7 +139,7 @@ const Step = () => {
 
 
       </div>
-      <div className='flex justify-start items-center px-9 gap-1'>
+      <div className='flex justify-start items-center px-2 sm:px-9 gap-[5px]'>
       <input
   type="checkbox"
   className="w-4 h-4 border-2 border-transparent rounded-md focus:ring-[#2E3072] focus:outline-none"
